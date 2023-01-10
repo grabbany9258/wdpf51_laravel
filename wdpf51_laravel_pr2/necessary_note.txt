@@ -1,0 +1,24 @@
+Create Project:
+	1) composer create-project laravel/laravel:^8.0 wdpf51_laravel_pr2
+
+	Specify kore nite:
+	composer create-project laravel/laravel:8.5.0 wdpf51_laravel_pr2
+
+Create Model with mcr including MODEL CONTROLLER MIGRATION :
+	2) php artisan make:model Product -mcr
+
+Creating Migrate:
+	1) php spark make:migrate (For creating migrate)
+	2) php artisan migrate (for migrating)
+	2) php artisan migrate:refresh (for change anything)
+	3) php artisan migrate:fresh --seed (Fore removing data & seed also inputing 	data)
+
+Creating Seed:
+	1) php artisan make:seeder ProductSeeder
+	2)php artisan db:seed (for sending data in database)
+	3) php artisan db:seed --class=UserSeeder (For sending specific seeder data 	from multiple)
+Creating Factory :
+	1) php artisan make:factory ProductFactory --model=product
+
+For viewing Details:
+	1) php artisan route:list
