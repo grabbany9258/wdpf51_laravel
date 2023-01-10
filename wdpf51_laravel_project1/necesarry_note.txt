@@ -1,0 +1,6 @@
+php version issue solve:
+	1) composer install --ignore-platform-reqs
+	
+
+For .env file(if it is missing);
+	2) copy .env.example .env

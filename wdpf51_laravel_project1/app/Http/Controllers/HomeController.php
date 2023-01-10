@@ -11,6 +11,11 @@ class HomeController extends Controller
         return view('backend/pages/admin_home');
     }
 
+    public function contact()
+    {
+        return view('backend/pages/contact');
+    }
+
     public function about()
     {
         return view('about');

@@ -1,6 +1,6 @@
-@extends('backend.layouts.app');
+@extends('backend.layouts.app')
 
-@section('content');
+@section('content')
 
 <div class="nk-content-body">
     <div class="nk-block-head nk-block-head-sm">
