@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Catagory;
 use App\Models\product;
 use Illuminate\Http\Request;
+
+
 
 class ProductController extends Controller
 {
@@ -14,7 +17,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('backend.products.index');
+
+
+        $data['cats'] = Catagory::orderBy('cat_name', 'ASC')->get();
+        $data['products'] = product::orderBy('id', 'DESC')->get();
+        // echo "<pre>";
+        // print_r($data);
+        return view('backend.products.index', $data);
     }
 
     /**
@@ -22,10 +31,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    // {
+    //     // 
+    // }
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +44,32 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //echo "hello";
+        //echo $request->product_name;
+
+        // $product = new product();
+        // $data['product_name'] = $request->product_name;
+        // $data['product_details'] = $request->product_details;
+        // $data['product_price'] = $request->product_price;
+        // $data['product_category'] = $request->product_category;
+        // $data['product_stock'] = $request->product_stock;
+        // $data['product_image'] = $request->product_image;
+
+        // $product->insert($data);
+
+        // Avabeo nibe
+
+        $product = new product();
+        $product->product_name = $request->product_name;
+        $product->product_details = $request->product_details;
+        $product->product_price = $request->product_price;
+        $product->product_category = $request->product_category;
+        $product->product_stock = $request->product_stock;
+        $product->product_image = $request->product_image;
+
+        $product->save();
+
+        return redirect('products');
     }
 
     /**
