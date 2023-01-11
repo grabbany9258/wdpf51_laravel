@@ -1,6 +1,9 @@
 Create Project:
 	1) composer create-project laravel/laravel:^8.0 wdpf51_laravel_pr2
 
+If any issue found in creating project with lower version type then command:
+	1) composer create-project 	laravel/laravel:^8.0 example --ignore-	platform-reqs
+
 	Specify kore nite:
 	composer create-project laravel/laravel:8.5.0 wdpf51_laravel_pr2
 
