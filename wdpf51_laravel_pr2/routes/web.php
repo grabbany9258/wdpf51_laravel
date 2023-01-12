@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProductController;
 

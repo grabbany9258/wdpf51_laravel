@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\product;
 
 class ProductFactory extends Factory
 {
@@ -14,6 +13,8 @@ class ProductFactory extends Factory
      */
     public function definition()
     {
+
+
         return [
             'product_name' => $this->faker->numerify('sample product ###'),
             'product_details' => $this->faker->text(),

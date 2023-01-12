@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Catagory;
+use App\Models\Category;
 use App\Models\product;
 use Illuminate\Http\Request;
 
@@ -19,7 +19,7 @@ class ProductController extends Controller
     {
 
 
-        $data['cats'] = Catagory::orderBy('cat_name', 'ASC')->get();
+        $data['cats'] = Category::orderBy('cat_name', 'ASC')->get();
         $data['products'] = product::orderBy('id', 'DESC')->get();
         // echo "<pre>";
         // print_r($data);
