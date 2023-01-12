@@ -19,11 +19,16 @@ class ProductController extends Controller
     {
 
 
-        $data['cats'] = Category::orderBy('cat_name', 'ASC')->get();
-        $data['products'] = product::orderBy('id', 'DESC')->get();
+
+        $products = product::latest()->paginate(5);
+        $cats = Category::orderBy('cat_name', 'ASC')->get();
+
+        // $data['products'] = product::orderBy('id', 'DESC')->get();
+        //$data['cats'] = Category::orderBy('cat_name', 'ASC')->get();
         // echo "<pre>";
         // print_r($data);
-        return view('backend.products.index', $data);
+
+        return view('backend.products.index', compact('products', 'cats'));
     }
 
     /**
@@ -44,32 +49,30 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
+        $request->validate([
+            'product_name' => 'required|min_length[3]'
+        ]);
+
+        if ($request->validate()) {
+            product::create($request->all());
+            return redirect('products');
+        }
+
         //echo "hello";
         //echo $request->product_name;
 
         // $product = new product();
-        // $data['product_name'] = $request->product_name;
-        // $data['product_details'] = $request->product_details;
-        // $data['product_price'] = $request->product_price;
-        // $data['product_category'] = $request->product_category;
-        // $data['product_stock'] = $request->product_stock;
-        // $data['product_image'] = $request->product_image;
+        // $product->product_name = $request->product_name;
+        // $product->product_details = $request->product_details;
+        // $product->product_price = $request->product_price;
+        // $product->product_category = $request->product_category;
+        // $product->product_stock = $request->product_stock;
+        // $product->product_image = $request->product_image;
 
-        // $product->insert($data);
+        // $product->save();
 
-        // Avabeo nibe
-
-        $product = new product();
-        $product->product_name = $request->product_name;
-        $product->product_details = $request->product_details;
-        $product->product_price = $request->product_price;
-        $product->product_category = $request->product_category;
-        $product->product_stock = $request->product_stock;
-        $product->product_image = $request->product_image;
-
-        $product->save();
-
-        return redirect('products');
+        //return redirect('products');
     }
 
     /**
