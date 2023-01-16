@@ -1127,6 +1127,11 @@
 // for add new product
 $(document).ready(function () {
     $("#addnew").click(function () {
-        alert($("form").serialize());
+        //alert($("form").serialize());
+        var values = $("form").serialize();
+        //document.write(values);
+        $.post("products", values, function (data) {
+            alert(data);
+        });
     });
 });

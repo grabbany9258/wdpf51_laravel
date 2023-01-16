@@ -2,14 +2,8 @@
 
 @section('content')
     <div class="nk-content-body">
-        @if ($msg = Session::get('msg'))
-            <div class="alert alert-success">
-                {{ $msg }}
-            </div>
-        @endif()
         <div class="nk-block-head nk-block-head-sm">
             <div class="nk-block-between">
-
                 <div class="nk-block-head-content">
                     <h3 class="nk-block-title page-title">Products</h3>
                 </div><!-- .nk-block-head-content -->
@@ -187,89 +181,6 @@
                 </div>
             </div>
         </div><!-- .nk-block -->
-        <div class="nk-add-product toggle-slide toggle-slide-right" data-content="addProduct" data-toggle-screen="any"
-            data-toggle-overlay="true" data-toggle-body="true" data-simplebar>
-            <div class="nk-block-head">
-                <div class="nk-block-head-content">
-                    <h5 class="nk-block-title">New Product</h5>
-                    <div class="nk-block-des">
-                        <p>Add information and add new product.</p>
-                    </div>
-                </div>
-            </div><!-- .nk-block-head -->
-            <div class="nk-block">
-                <div class="row g-3">
-                    <form id="productForm" action="{{ url('/products') }}" method="post">
-                        @csrf
-                        <div class="col-12">
 
-                            <div class="form-group">
-                                <label class="form-label" for="product-title">Product Name</label>
-                                <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="product_name" id="product_name">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" for="product-title">Product details</label>
-                                <div class="form-control-wrap">
-                                    <textarea name="product_details" id="product_details" cols="20" rows="3" class="form-control"></textarea>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label" for="regular-price">Product Price</label>
-                                <div class="form-control-wrap">
-                                    <input type="number" class="form-control" name="product_price" id="product_price">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="form-label" for="stock">Stock</label>
-                                <div class="form-control-wrap">
-                                    <input type="text" class="form-control" name="product_stock" id="product_stock">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-group">
-                                <label class="form-label" for="category">Category</label>
-                                <div class="form-control-wrap">
-
-                                    <select name="product_category" id="" class="form-control">
-                                        <option value=""disabled selected>Select One</option>
-                                        @foreach ($cats as $cat)
-                                            <option value="{{ $cat->id }}">{{ $cat->cat_name }}</option>
-                                        @endforeach
-                                    </select>
-
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-12">
-                            <div class="upload-zone small bg-lighter my-2">
-                                <div class="dz-message">
-                                    <span class="dz-message-text">Drag and drop file</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <button type="button" id="addnew" class="btn btn-primary"><em
-                                    class="icon ni ni-plus"></em><span>Add
-                                    New</span></button>
-                        </div>
-                    </form>
-                </div>
-            </div><!-- .nk-block -->
-        </div>
     </div>
 @endsection

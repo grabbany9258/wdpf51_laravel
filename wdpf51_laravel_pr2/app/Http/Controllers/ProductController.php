@@ -36,10 +36,11 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     // 
-    // }
+    public function create()
+    {
+        $cats = Category::orderBy('cat_name', 'ASC')->get();
+        return view('backend.products.create', compact('cats'));
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -50,29 +51,43 @@ class ProductController extends Controller
     public function store(Request $request)
     {
 
+        //echo "Hello rabbany";
+
         $request->validate([
-            'product_name' => 'required|min_length[3]'
+            'product_name' => 'required',
+            'product_details' => 'min:5|max:200',
+            'product_price' => 'required',
+            'product_category' => 'required',
+            'product_stock' => 'required',
+
         ]);
 
-        if ($request->validate()) {
-            product::create($request->all());
-            return redirect('products');
-        }
+        // if ($validation) {
+        //     //product::create($request->all());
+        //     //return redirect('products');
+        //     echo "success";
+        // } else {
+        //     echo "Faild";
+        // }
 
         //echo "hello";
         //echo $request->product_name;
 
-        // $product = new product();
-        // $product->product_name = $request->product_name;
-        // $product->product_details = $request->product_details;
-        // $product->product_price = $request->product_price;
-        // $product->product_category = $request->product_category;
-        // $product->product_stock = $request->product_stock;
-        // $product->product_image = $request->product_image;
 
-        // $product->save();
 
-        //return redirect('products');
+        $product = new product();
+        $product->product_name = $request->product_name;
+        $product->product_details = $request->product_details;
+        $product->product_price = $request->product_price;
+        $product->product_category = $request->product_category;
+        $product->product_stock = $request->product_stock;
+        $product->product_image = $request->product_image;
+
+        $product->save();
+
+        return redirect('products')->with('msg', "Product Succesfully Added");
+        //echo "success";
+
     }
 
     /**

@@ -1,17 +1,22 @@
 <div class="nk-sidebar nk-sidebar-fixed is-light " data-content="sidebarMenu">
     <div class="nk-sidebar-element nk-sidebar-head">
         <div class="nk-sidebar-brand">
-            <a href="<?php //echo route('home'); 
-                        ?>" class="logo-link nk-sidebar-logo">
-                <a href=" {{route('home')}}" class="logo-link nk-sidebar-logo">
-                    <img class="logo-light logo-img" src="assets/images/logo.png" srcset="assets/images/logo2x.png 2x" alt="logo">
-                    <img class="logo-dark logo-img" src="assets/images/logo-dark.png" srcset="assets/images/logo-dark2x.png 2x" alt="logo-dark">
-                    <img class="logo-small logo-img logo-img-small" src="assets/images/logo-small.png" srcset="assets/images/logo-small2x.png 2x" alt="logo-small">
+            <a href="<?php //echo route('home');
+            ?>" class="logo-link nk-sidebar-logo">
+                <a href=" {{ route('home') }}" class="logo-link nk-sidebar-logo">
+                    <img class="logo-light logo-img" src="assets/images/logo.png" srcset="assets/images/logo2x.png 2x"
+                        alt="logo">
+                    <img class="logo-dark logo-img" src="assets/images/logo-dark.png"
+                        srcset="assets/images/logo-dark2x.png 2x" alt="logo-dark">
+                    <img class="logo-small logo-img logo-img-small" src="assets/images/logo-small.png"
+                        srcset="assets/images/logo-small2x.png 2x" alt="logo-small">
                 </a>
         </div>
         <div class="nk-menu-trigger me-n2">
-            <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em class="icon ni ni-arrow-left"></em></a>
-            <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+            <a href="#" class="nk-nav-toggle nk-quick-nav-icon d-xl-none" data-target="sidebarMenu"><em
+                    class="icon ni ni-arrow-left"></em></a>
+            <a href="#" class="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex"
+                data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
         </div>
     </div><!-- .nk-sidebar-element -->
     <div class="nk-sidebar-element">
@@ -50,10 +55,12 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Project Cards</span></a>
+                                <a href="html/project-card.html" class="nk-menu-link"><span class="nk-menu-text">Project
+                                        Cards</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project List</span></a>
+                                <a href="html/project-list.html" class="nk-menu-link"><span class="nk-menu-text">Project
+                                        List</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
@@ -64,22 +71,28 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/user-list-default.html" class="nk-menu-link"><span class="nk-menu-text">User List - Default</span></a>
+                                <a href="html/user-list-default.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">User List - Default</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/user-list-regular.html" class="nk-menu-link"><span class="nk-menu-text">User List - Regular</span></a>
+                                <a href="html/user-list-regular.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">User List - Regular</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/user-list-compact.html" class="nk-menu-link"><span class="nk-menu-text">User List - Compact</span></a>
+                                <a href="html/user-list-compact.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">User List - Compact</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/user-details-regular.html" class="nk-menu-link"><span class="nk-menu-text">User Details - Regular</span></a>
+                                <a href="html/user-details-regular.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">User Details - Regular</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/user-profile-regular.html" class="nk-menu-link"><span class="nk-menu-text">User Profile - Regular</span></a>
+                                <a href="html/user-profile-regular.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">User Profile - Regular</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/user-card.html" class="nk-menu-link"><span class="nk-menu-text">User Contact - Card</span></a>
+                                <a href="html/user-card.html" class="nk-menu-link"><span class="nk-menu-text">User
+                                        Contact - Card</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
@@ -90,13 +103,16 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/orders-default.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Default</span></a>
+                                <a href="html/orders-default.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Order List - Default</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/orders-regular.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Regular</span></a>
+                                <a href="html/orders-regular.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Order List - Regular</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/orders-sales.html" class="nk-menu-link"><span class="nk-menu-text">Order List - Sales</span></a>
+                                <a href="html/orders-sales.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Order List - Sales</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
@@ -107,22 +123,28 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/apps-messages.html" class="nk-menu-link"><span class="nk-menu-text">Messages</span></a>
+                                <a href="html/apps-messages.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Messages</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/apps-inbox.html" class="nk-menu-link"><span class="nk-menu-text">Inbox / Mail</span></a>
+                                <a href="html/apps-inbox.html" class="nk-menu-link"><span class="nk-menu-text">Inbox
+                                        / Mail</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/apps-file-manager.html" class="nk-menu-link"><span class="nk-menu-text">File Manager</span></a>
+                                <a href="html/apps-file-manager.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">File Manager</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/apps-chats.html" class="nk-menu-link"><span class="nk-menu-text">Chats / Messenger</span></a>
+                                <a href="html/apps-chats.html" class="nk-menu-link"><span class="nk-menu-text">Chats
+                                        / Messenger</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/apps-calendar.html" class="nk-menu-link"><span class="nk-menu-text">Calendar</span></a>
+                                <a href="html/apps-calendar.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Calendar</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/apps-kanban.html" class="nk-menu-link"><span class="nk-menu-text">Kanban Board</span></a>
+                                <a href="html/apps-kanban.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Kanban Board</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
@@ -133,10 +155,12 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="html/invoice-list.html" class="nk-menu-link"><span class="nk-menu-text">Invoice List</span></a>
+                                <a href="html/invoice-list.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Invoice List</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/invoice-details.html" class="nk-menu-link"><span class="nk-menu-text">Invoice Details</span></a>
+                                <a href="html/invoice-details.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Invoice Details</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
@@ -147,13 +171,16 @@
                         </a>
                         <ul class="nk-menu-sub">
                             <li class="nk-menu-item">
-                                <a href="{{url('/products')}}" class="nk-menu-link"><span class="nk-menu-text">Product List</span></a>
+                                <a href="{{ url('/products') }}" class="nk-menu-link"><span
+                                        class="nk-menu-text">Product List</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/product-card.html" class="nk-menu-link"><span class="nk-menu-text">Product Card</span></a>
+                                <a href="{{ url('/products/create') }}" class="nk-menu-link"><span
+                                        class="nk-menu-text">Product Entry</span></a>
                             </li>
                             <li class="nk-menu-item">
-                                <a href="html/product-details.html" class="nk-menu-link"><span class="nk-menu-text">Product Details</span></a>
+                                <a href="html/product-details.html" class="nk-menu-link"><span
+                                        class="nk-menu-text">Product Details</span></a>
                             </li>
                         </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
