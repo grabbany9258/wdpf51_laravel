@@ -59,6 +59,7 @@ class ProductController extends Controller
             'product_price' => 'required',
             'product_category' => 'required',
             'product_stock' => 'required',
+            'product_image' => 'mimes:jpeg,png,jpg,pdf,gif,svg|max:2048',
 
         ]);
 
@@ -75,13 +76,23 @@ class ProductController extends Controller
 
 
 
+
         $product = new product();
         $product->product_name = $request->product_name;
         $product->product_details = $request->product_details;
         $product->product_price = $request->product_price;
         $product->product_category = $request->product_category;
         $product->product_stock = $request->product_stock;
-        $product->product_image = $request->product_image;
+
+
+
+        if ($request->product_image) {
+            $imageName = time() . '.' . $request->product_image->extension();
+            $request->product_image->move(public_path('product_photos'), $imageName);
+            $product->product_image = $imageName;
+        } else {
+            $product->product_image = '';
+        }
 
         $product->save();
 
@@ -98,7 +109,7 @@ class ProductController extends Controller
      */
     public function show(product $product)
     {
-        //
+        return view('backend.products.show', compact('product'));
     }
 
     /**

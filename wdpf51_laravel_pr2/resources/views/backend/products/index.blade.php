@@ -110,7 +110,8 @@
                                     </div>
                                     <div class="nk-tb-col tb-col-sm">
                                         <span class="tb-product">
-                                            <img src="./images/product/a.png" alt="" class="thumb">
+                                            <img src="/product_photos/{{ $product->product_image }}" alt=""
+                                                class="thumb">
                                             <span class="title">{{ $product->product_name }}
 
                                             </span>
@@ -150,7 +151,7 @@
                                                             <li><a href="#"><em
                                                                         class="icon ni ni-edit"></em><span>Edit
                                                                         Product</span></a></li>
-                                                            <li><a href="#"><em
+                                                            <li><a href="{{ route('products.show', $product->id) }}"><em
                                                                         class="icon ni ni-eye"></em><span>View
                                                                         Product</span></a></li>
                                                             <li><a href="#"><em
