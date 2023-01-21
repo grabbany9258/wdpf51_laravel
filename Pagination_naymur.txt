@@ -1,0 +1,9 @@
+1) footer a add korte hbe js
+2) https://github.com/naymur92/wdpf51_Laravel/blob/main/laravel8_project1/resources/views/backend/products/index.blade.php
+
+ {{ $products->links('vendor.pagination.dashlite') }}
+
+
+3) https://github.com/naymur92/wdpf51_Laravel/tree/main/laravel8_project1/resources/views/vendor/pagination
+
+dashlite.blade.php 
