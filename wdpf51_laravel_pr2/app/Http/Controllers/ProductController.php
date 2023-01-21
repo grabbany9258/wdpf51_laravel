@@ -120,7 +120,9 @@ class ProductController extends Controller
      */
     public function edit(product $product)
     {
-        //
+        //echo $product->id;
+        $cats = Category::orderBy('cat_name', 'ASC')->get();
+        return view('backend.products.edit', compact('product', 'cats'));
     }
 
     /**
@@ -132,7 +134,35 @@ class ProductController extends Controller
      */
     public function update(Request $request, product $product)
     {
-        //
+        //echo "yes";
+
+        $request->validate([
+            'product_name' => 'required',
+            'product_details' => 'min:5|max:200',
+            'product_price' => 'required',
+            'product_category' => 'required',
+            'product_stock' => 'required',
+            'product_image' => 'mimes:jpeg,png,jpg,pdf,gif,svg|max:2048',
+        ]);
+
+
+        $product->product_name = $request->product_name;
+        $product->product_details = $request->product_details;
+        $product->product_price = $request->product_price;
+        $product->product_category = $request->product_category;
+        $product->product_stock = $request->product_stock;
+
+
+
+        if ($request->product_image) {
+            $imageName = time() . '.' . $request->product_image->extension();
+            $request->product_image->move(public_path('product_photos'), $imageName);
+            $product->product_image = $imageName;
+        }
+
+        $product->update();
+
+        return redirect('products')->with('msg', "Product Succesfully Updated");
     }
 
     /**
@@ -143,6 +173,8 @@ class ProductController extends Controller
      */
     public function destroy(product $product)
     {
-        //
+        //echo $product->id;
+        $product->delete();
+        return redirect('products')->with('msg', "Product Succesfully Deleted");
     }
 }

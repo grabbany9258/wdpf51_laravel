@@ -1135,3 +1135,8 @@ $(document).ready(function () {
         });
     });
 });
+
+// Jquery for deleting product
+// $(document).ready(function () {
+//     $(".remove").click(function () {});
+// });
