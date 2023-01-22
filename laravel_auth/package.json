@@ -25,5 +25,8 @@
         "ts-loader": "^9.4.2",
         "vue-template-compiler": "^2.7.14",
         "webpack-cli": "^5.0.1"
+    },
+    "dependencies": {
+        "vue-loader": "^17.0.1"
     }
 }
