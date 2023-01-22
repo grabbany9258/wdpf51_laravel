@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
-
+use App\Http\Controllers\showAge;
+use App\Http\Middleware\AuthLogin;
+use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +20,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
+// Route::get('/admin', function () {
+//     return view('auth/login');
 // });
 
 // Route::get('/', [ProductController::class, 'index']);
-Route::get('/', [DashboardController::class, 'index'])->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
 //Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::resource('products', ProductController::class);
+
+// Creating a middleware for showAge
+Route::middleware([CheckAge::class])->group(function () {
+    Route::get('viewage', [showAge::class, 'index']);
+});
+
+// For Login Auth
+Route::get('/admin', [LoginController::class, 'index']);
+
+
+Route::middleware([AuthLogin::class])->group(function () {
+    Route::post('/login', [LoginController::class, 'login']);
+});
