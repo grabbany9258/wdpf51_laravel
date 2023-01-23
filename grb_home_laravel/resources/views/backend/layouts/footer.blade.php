@@ -177,6 +177,7 @@
 <script src="assets/assets/js/bundle.js?ver=3.1.1"></script>
 <script src="assets/assets/js/scripts.js?ver=3.1.1"></script>
 <script src="assets/assets/js/charts/gd-default.js?ver=3.1.1"></script>
+{{-- For newly added all js  --}}
 <script src="/assets/assets/js/custom.js"></script>
 </body>
 

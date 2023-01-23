@@ -27,7 +27,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('backend.products.create');
+        //return view('backend.products.create');
     }
 
     /**
@@ -41,26 +41,26 @@ class ProductController extends Controller
 
         //echo $request->product_name;
 
-        $product = new product();
-        $product->product_name = $request->product_name;
-        $product->product_details = $request->product_details;
-        $product->product_price = $request->product_price;
-        $product->product_category = $request->product_category;
-        $product->product_stock = $request->product_stock;
+        // $product = new product();
+        // $product->product_name = $request->product_name;
+        // $product->product_details = $request->product_details;
+        // $product->product_price = $request->product_price;
+        // $product->product_category = $request->product_category;
+        // $product->product_stock = $request->product_stock;
 
 
 
-        if ($request->product_image) {
-            $imageName = time() . '.' . $request->product_image->extension();
-            $request->product_image->move(public_path('product_photos'), $imageName);
-            $product->product_image = $imageName;
-        } else {
-            $product->product_image = '';
-        }
+        // if ($request->product_image) {
+        //     $imageName = time() . '.' . $request->product_image->extension();
+        //     $request->product_image->move(public_path('product_photos'), $imageName);
+        //     $product->product_image = $imageName;
+        // } else {
+        //     $product->product_image = '';
+        // }
 
-        $product->save();
+        // $product->save();
 
-        return redirect('products')->with('msg', "Product Succesfully Added");
+        // return redirect('products')->with('msg', "Product Succesfully Added");
     }
 
     /**

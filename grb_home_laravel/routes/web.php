@@ -19,5 +19,5 @@ use App\Http\Controllers\ProductController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [DashboardController::class, 'index'])->name('admin');
+Route::get('/admin', [DashboardController::class, 'index'])->name('admin');
 Route::resource('/products', ProductController::class);

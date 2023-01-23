@@ -1,0 +1,10 @@
+Pagination steps:
+	1) command: php artisan vendor:publish --tag=laravel-pagination 
+	2) Links in index.blade.php
+	{{ $products->links('vendor.pagination.dashlite') }}
+	3) js script added in custom nd id added in dashlite.blade.php select part for dropdown paginate part.
+
+######## Bootstrape use korle ##########
+	1) command: php artisan vendor:publish --tag=laravel-pagination 
+	2) Add links...... 
+	{{ $products->links('vendor.pagination.dashlite') }}

@@ -19,7 +19,7 @@ class AuthLogin
     {
         $email = $request->email;
         $pass = $request->password;
-        $pass = sha1($pass);
+        // $pass = sha1($pass);
         $user = new User;
         $data = $user->where('email', $email);
         $data = $user->where('password', $pass)->get();
