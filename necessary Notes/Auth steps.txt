@@ -1,0 +1,25 @@
+Installing Command:
+	1) composer create-project laravel/laravel example-app
+	2. cd wdpf51_laravel8_jetstream_auth
+	3. composer require laravel/jetstream
+	4. php artisan jetstream:install livewire
+	5. npm install
+	6. npm run dev
+	7. .env Database configuration
+	8. php artisan migrate
+	9. php artisan serve
+	10. Do registration and login and try to update your profile
+
+	###########################
+	CSS display correction
+###########################
+1. go to (app.blade.php, guest.blade.php) and remove @vite like this
+
+@vite(['resources/css/app.css', 'resources/js/app.js']) => Remove this and add following
+
+2. Add this instead of @vite.
+<link rel="stylesheet" href="{{ asset('css/app.css') }}">
+<script src="{{ asset('js/app.js') }}" defer></script>
+###########################
+CSS display correction
+###########################
