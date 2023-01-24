@@ -4,6 +4,7 @@ use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\showAge;
 use App\Http\Middleware\AuthLogin;
 use App\Http\Middleware\CheckAge;
@@ -41,3 +42,17 @@ Route::get('/admin', [LoginController::class, 'index']);
 Route::middleware([AuthLogin::class])->group(function () {
     Route::post('/login', [LoginController::class, 'login']);
 });
+
+// Foe using css & script
+
+Route::get('/jobs', function () {
+    return view('jobs');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+
+// for report
+Route::get('/reports', [ReportController::class, 'report1']);

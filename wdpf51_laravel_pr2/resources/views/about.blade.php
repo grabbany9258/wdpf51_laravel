@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+{{-- 2 vabe kora jay --}}
+{{-- @section('title', 'About us') --}}
+@section('title')
+    About us
+@endsection
 
-<body>
-    <h1>This is About Page</h1>
-</body>
+{{-- For content --}}
+@section('contenent')
+    This is my about page.. it is showing throughout the section part
+@endsection
 
-</html>
+@push('styles')
+    <link rel="stylesheet" href="aboutstyle.css">
+@endpush
