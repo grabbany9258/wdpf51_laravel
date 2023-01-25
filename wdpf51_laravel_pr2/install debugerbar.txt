@@ -1,0 +1,1 @@
+debugbar link: https://github.com/barryvdh/laravel-debugbar
