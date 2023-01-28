@@ -38,6 +38,33 @@
                     <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
             </ul>
+
+            <ul class="pull-right navbar-nav">
+                <li class="nav-item">
+
+                    @if (Route::has('login'))
+                        @auth
+                    <li class="nav-item"><a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <li class="nav-item">
+                        <form action="{{ Route('logout') }}" method="post">
+                            @csrf
+                            <button class="btn btn-danger">Logout</button>
+                        </form>
+                    </li>
+                @else
+                    <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Log in</a></li>
+
+
+                    @if (Route::has('register'))
+                        <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
+                    @endif
+                @endauth
+        </div>
+        @endif
+        </li>
+        </ul>
+
+
         </div>
     </nav>
 

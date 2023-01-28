@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\backend\LoginController;
+use App\Http\Controllers\backend\UserController;
 use App\Http\Controllers\frontend\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 // For Login
 
-Route::get('/admin', [LoginController::class, 'login']);
+// Route::get('/admin', [LoginController::class, 'login']);
 
 
 
@@ -38,5 +39,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
+        // For user 
+        Route::resource('/users', [UserController::class]);
     })->name('dashboard');
 });

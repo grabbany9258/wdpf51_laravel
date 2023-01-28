@@ -16,6 +16,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-3 mt-4">
+
+
                 <h1 class="text-center my-4">Login Form</h1>
                 <form method="post" action="{{ route('login') }}">
                     @csrf
