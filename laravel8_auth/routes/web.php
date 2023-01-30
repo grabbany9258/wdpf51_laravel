@@ -32,14 +32,15 @@ Route::get('/', [HomeController::class, 'index']);
 
 // Backend Routes
 
-Route::middleware([
+Route::prefix('admin')->middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
-        // For user 
-        Route::resource('/users', [UserController::class]);
     })->name('dashboard');
+
+    // For user 
+    Route::resource('/users', UserController::class);
 });
