@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\showAge;
+use App\Http\Controllers\UserController;
 use App\Http\Middleware\AuthLogin;
 use App\Http\Middleware\CheckAge;
 use Illuminate\Support\Facades\Route;
@@ -56,3 +57,7 @@ Route::get('/about', function () {
 
 // for report
 Route::get('/reports', [ReportController::class, 'report1']);
+
+// one to one relation
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/phones', [UserController::class, 'phoneData']);
