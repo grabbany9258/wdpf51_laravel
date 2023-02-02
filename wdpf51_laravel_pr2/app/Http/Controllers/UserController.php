@@ -23,4 +23,13 @@ class UserController extends Controller
         $phones = Phone::find(1);
         echo $phones->naymur->name;
     }
+
+    // Eloquent Many to Many
+
+    public function roleAssign()
+    {
+        $user = User::find(1);
+        $roleId = [1, 2];
+        $user->roles()->attach($roleId);
+    }
 }
