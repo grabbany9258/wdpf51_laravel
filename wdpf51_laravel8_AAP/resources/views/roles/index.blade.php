@@ -47,9 +47,10 @@
             </tr>
         @endforeach
     </table>
+    {!! $roles->links('vendor.pagination.bootstrap-4') !!}
 
 
-    {!! $roles->render() !!}
+
 
 
     <p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>

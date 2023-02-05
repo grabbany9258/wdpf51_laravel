@@ -49,13 +49,15 @@
                             <button type="submit" class="btn btn-danger">Delete</button>
                         @endcan
                     </form>
+
                 </td>
             </tr>
         @endforeach
     </table>
 
 
-    {!! $products->links() !!}
+    {!! $products->links('vendor.pagination.bootstrap-4') !!}
+
 
 
     <p class="text-center text-primary"><small>Tutorial by ItSolutionStuff.com</small></p>

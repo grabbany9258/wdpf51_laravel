@@ -41,8 +41,11 @@
                             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
                         @else
-                            <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
-                            <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                            <?php $roleid = Auth::user()->roles->first()->id; ?>
+                            @if ($roleid == 1)
+                                <li><a class="nav-link" href="{{ route('users.index') }}">Manage Users</a></li>
+                                <li><a class="nav-link" href="{{ route('roles.index') }}">Manage Role</a></li>
+                            @endif
                             <li><a class="nav-link" href="{{ route('products.index') }}">Manage Product</a></li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -70,6 +73,18 @@
                 </div>
             </div>
         </nav>
+
+
+        {{-- // echo '
+        <pre>';
+        // echo $user=(
+        //     Auth::user()
+        //         ->getRollNames()
+        //         ->first(),
+        // //); --}}
+        {{-- {{ Auth::user()->roles->first()->id }} --}}
+
+        {{-- echo Auth::user()->id; --}}
 
 
         <main class="py-4">
