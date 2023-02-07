@@ -3,6 +3,7 @@
 use App\Http\Controllers\CatagoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ReportController;
@@ -68,3 +69,11 @@ Route::get('/posts', [PostController::class, 'index']);
 
 // Many to Many relation 
 Route::get('/roles', [UserController::class, 'roleAssign']);
+
+// For Mail
+Route::get('send-mail', [MailController::class, 'index']);
+
+// Mail with form
+Route::get('contact-mail', [MailController::class, 'contactForm']);
+
+Route::post('contact-mail', [MailController::class, 'MessageSend'])->name('sendMsg');
