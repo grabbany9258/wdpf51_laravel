@@ -1,0 +1,15 @@
+API : page(339)
+Link : https://www.itsolutionstuff.com/post/laravel-8-rest-api-with-passport-authentication-tutorialexample.html
+
+Link : postman apps downlaod korte hbe,
+
+Link: LightShot download korte hbe
+
+1) php artisan make:controller Api\DogsController --api
+2) Api checked with postman 
+
+1) header a dite hoy link &   X-XSRF-TOKEN , {{xsrf-token}} , accept, json
+2) get a link
+3) post a param a table data & value.
+4) update & delete a id dite hbe link a .
+5) 

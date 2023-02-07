@@ -6,6 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use App\Models\Phone;
 
 class User extends Authenticatable
 {
@@ -37,4 +38,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the phone record associated with the user.
+     */
+    public function phoneTable()
+    {
+        return $this->hasOne(Phone::class);
+    }
+
+    // for Many to Many
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_users');
+    }
 }

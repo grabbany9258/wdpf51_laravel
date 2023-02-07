@@ -1,0 +1,7 @@
+Tinker: Book page 217
+	1)   App\Models\post::find();
+For getting all data:
+	2)   $user->get();
+
+
+	

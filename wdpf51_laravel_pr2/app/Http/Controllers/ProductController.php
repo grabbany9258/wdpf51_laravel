@@ -20,8 +20,10 @@ class ProductController extends Controller
 
 
 
+
         $products = product::paginate(10);
         $cats = Category::orderBy('cat_name', 'ASC')->get();
+
 
         // $data['products'] = product::orderBy('id', 'DESC')->get();
         //$data['cats'] = Category::orderBy('cat_name', 'ASC')->get();
