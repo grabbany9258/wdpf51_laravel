@@ -1,0 +1,7 @@
+Routing: LINK:  https://www.koderhq.com/tutorial/vue/router-routing/
+
+Axios: Link:  https://www.koderhq.com/tutorial/vue/http-axios/
+
+1) install korte hbe axios
+2) 
+	
