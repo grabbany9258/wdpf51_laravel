@@ -1,0 +1,14 @@
+1) main.js a 
+		!) import { createApp } from "vue";
+		!!) import App from "./App.vue";
+		!!!) createApp(App).mount("#app");
+ css rakhte hbe index.html a ..
+2) body part niye rakhbo App.vue te
+3) tarpor kete alada  folder baniye tar vitor file a rakhbo Header.vue te,,
+4) Header.vue te formate vueinit diye formate niye template ar vitore dibo kete niye.
+5) and App.vue te script a    import Header from "./layouts/Header.vue"; 
+6) export default a dite hbe...
+	export default {
+  components: { Header },
+};
+7) Header ar jaygay bole dite hbe <Header />
