@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 // Route::get('/', [ProductController::class, 'index']);
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('home');
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 //Route::get('/products', [ProductController::class, 'index'])->name('products');
 Route::resource('products', ProductController::class);
 
@@ -39,12 +39,12 @@ Route::middleware([CheckAge::class])->group(function () {
 });
 
 // For Login Auth
-Route::get('/admin', [LoginController::class, 'index']);
+//Route::get('/admin', [LoginController::class, 'index']);
 
 
-Route::middleware([AuthLogin::class])->group(function () {
-    Route::post('/login', [LoginController::class, 'login']);
-});
+// Route::middleware([AuthLogin::class])->group(function () {
+//     Route::post('/login', [LoginController::class, 'login']);
+// });
 
 // Foe using css & script
 
