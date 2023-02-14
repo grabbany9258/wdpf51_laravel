@@ -31,6 +31,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+
         $input = $request->all();
 
         $request->validate([
@@ -39,10 +40,11 @@ class ProductController extends Controller
             'product_price' => 'required',
             'product_category' => 'required',
             'product_stock' => 'required',
-            'product_image' => 'mimes:jpeg,png,jpg,pdf,gif,svg|max:2048',
+            // 'product_image' => 'mimes:jpeg,png,jpg,pdf,gif,svg|max:2048',
 
         ]);
-        return Product::create($input);
+        Product::create($input);
+        return "Inserted Successfully";
     }
 
     /**
@@ -71,7 +73,8 @@ class ProductController extends Controller
 
         $input = $request->all();
         $product->update($input);
-        return  Product::findOrFail($id);
+        Product::findOrFail($id);
+        return "Success";
     }
 
     /**
@@ -83,6 +86,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         $product = Product::findOrFail($id);
-        return $product->delete($id);
+        $product->delete($id);
+        return response()->json(['msg' => 'Successfully Deleted']);
     }
 }
