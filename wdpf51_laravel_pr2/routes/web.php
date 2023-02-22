@@ -39,7 +39,7 @@ Route::middleware([CheckAge::class])->group(function () {
 });
 
 // For Login Auth
-//Route::get('/admin', [LoginController::class, 'index']);
+// Route::get('/admin', [LoginController::class, 'index']);
 
 
 // Route::middleware([AuthLogin::class])->group(function () {

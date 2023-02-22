@@ -1,0 +1,16 @@
+npm install
+npm i vue
+npm i vue-loader --save-dev
+npm i vue-template-loader --save-dev
+npm i vue-router
+######################################
+1. composer create-project laravel/laravel wdpf51_laravel8_vue3
+2. composer require laravel/ui
+4. php artisan ui vue --auth  
+5. npm install
+6. npm run dev
+7. env configure
+8. php artisan migrate
+9. npm i vue
+10. npm i vue-loader --save-dev
+11. npm i vue-router
