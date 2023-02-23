@@ -47,8 +47,8 @@
                     <div class="col-lg-6">
                         <nav class="header__menu">
                             <ul>
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="./shop-grid.html">Shop</a></li>
+                                <li><router-link to="./">Home</router-link></li>
+                                <li><router-link to="./shop">Shop</router-link></li>
                                 <li><a href="#">Pages</a>
                                     <ul class="header__menu__dropdown">
                                         <li><a href="./shop-details.html">Shop Details</a></li>
