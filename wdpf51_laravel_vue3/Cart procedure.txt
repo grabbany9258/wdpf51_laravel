@@ -1,0 +1,11 @@
+Add to cart:
+1) Cart name a model banano with -mcr
+2) cart migrate
+3)create file in component ->Cart, AddTo Cart component
+4)AddTo Cart component a shop.vue page theke cart howar li ta niye aste hbe, and okhn a tag akare dite hbe,, and shop a upore import korte hbe... and AddTo Cart component a method banate hbe..
+
+#### Id Pathano #####
+
+1)  props: ["pr_id"],  props banate hbe AddToCart component a..
+
+2)Shop.vue a   <add-to-cart :pr_id="product.id"></add-to-cart>   avabe dite hbe

@@ -29,7 +29,7 @@ Route::get('/products', [App\Http\Controllers\FrontendController::class, 'allPro
 
 
 
-// for changing path 
+// for changing path as its not contadict with laravel & vue
 Route::get('{slug}', function () {
     return view('front');
 });
