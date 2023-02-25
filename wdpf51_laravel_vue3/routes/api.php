@@ -22,4 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // For Add To cart
 
-Route::apiResource('cart', CartController::class);
+// Route::apiResource('cart', CartController::class);

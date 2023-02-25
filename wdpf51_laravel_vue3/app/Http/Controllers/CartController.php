@@ -6,6 +6,9 @@ use App\Models\Cart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
+
 
 class CartController extends Controller
 {
@@ -17,7 +20,24 @@ class CartController extends Controller
     public function index()
     {
         // return "Hello";
-        return Cart::all()->count();
+        //return Cart::all()->count();
+
+        $id = Auth::user()->id;
+        // return Cart::where('user_id', $id)->get();
+        // $items =  DB::table('carts')
+        //     ->join('products', 'products.id', '=', 'carts.product_id')
+        //     ->where('carts.user_id', $id)
+        //     ->get();
+
+        // json data dekhte
+        // return response()->json($items);
+
+        // $items = Cart::where('user_id', $id)->get();
+        // return response()->json($items);
+
+        // With Relation ata kora hoyece Model ar maddhme.
+        $items = Cart::with('product')->where('user_id', $id)->get();
+        return response()->json($items);
     }
 
     /**
@@ -49,13 +69,13 @@ class CartController extends Controller
             'product_id' => $product->id,
             'quantity' => 1,
             'price' => $product->price,
-            // 'user_id' => Auth::user()->id,
-            'user_id' => 1,
+            'user_id' => Auth::user()->id,
+            // 'user_id' => 1,
         ];
 
         Cart::create($data);
-        // return Auth::user()->id;
-        return 'Success';
+        return Auth::user()->id;
+        //return 'Success';
     }
 
     /**

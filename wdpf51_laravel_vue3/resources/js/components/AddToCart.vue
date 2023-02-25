@@ -10,7 +10,7 @@ export default {
         addProducttoCart() {
             // alert('Your Id is: ' + this.pr_id);
             // API ar maddhome id pass kora hoyece
-            axios.post('api/cart', { prid: this.pr_id }).then
+            axios.post('/cart', { prid: this.pr_id }).then
                 // ((res) => { alert(res.data) })
                 ((res) => { console.log(res.data) })
         }
